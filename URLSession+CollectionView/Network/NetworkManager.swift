@@ -17,9 +17,32 @@ struct NetworkManager {
         self.session = session
     }
     
-    // MARK: - Basic URLSession
-    func fetchData<T: Decodable>(page: Int, decodingType: T.Type) {
+    // MARK: - Basic URLSession: CompletionHandler 사용
+    func fetchData<T: Decodable>(
+        api: APIProtocol,
+        decodingType: T.Type,
+        completion: @escaping (Result<T?, Error>) -> Void
+    ) {
+        guard let request = URLRequest(api: api) else {
+            completion(.failure(NetworkError.cannotMakeURLRequest))
+            
+            return
+        }
+        let task = session.dataTask(with: request) { data, response, error in
+            if let error {
+                completion(.failure(error))
+                return
+            }
+            
+            if let data {
+                let parser = JSONParser<T>()
+                let parsedData = parser.decode(from: data)
+                
+                completion(.success(parsedData))
+            }
+        }
         
+        task.resume()
     }
 
     // MARK: - RxSwift
@@ -70,6 +93,7 @@ extension NetworkManager {
         case statusCodeError
         case unknownError
         case urlIsNil
+        case cannotMakeURLRequest
         
         var errorDescription: String? {
             switch self {
@@ -79,6 +103,8 @@ extension NetworkManager {
                 return "알수 없는 에러가 발생했습니다."
             case .urlIsNil:
                 return "정상적인 URL이 아닙니다."
+            case .cannotMakeURLRequest:
+                return "URLRequest를 생성하지 못했습니다."
             }
         }
     }

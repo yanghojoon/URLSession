@@ -25,6 +25,10 @@
 		DE498A5B2ADF787B00EE574A /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE498A5A2ADF787B00EE574A /* URLRequest+Extension.swift */; };
 		DE498A5D2ADF7A3500EE574A /* ImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE498A5C2ADF7A3500EE574A /* ImageURL.swift */; };
 		DE498A602ADF7E0600EE574A /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE498A5F2ADF7E0600EE574A /* Image.swift */; };
+		DE498A672ADFA0B600EE574A /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE498A662ADFA0B600EE574A /* ImageCell.swift */; };
+		DE498A692ADFA0EE00EE574A /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE498A682ADFA0EE00EE574A /* UICollectionView+Extension.swift */; };
+		DE498A6C2ADFA11800EE574A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DE498A6B2ADFA11800EE574A /* SnapKit */; };
+		DE498A6E2ADFA22A00EE574A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE498A6D2ADFA22A00EE574A /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,9 @@
 		DE498A5A2ADF787B00EE574A /* URLRequest+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
 		DE498A5C2ADF7A3500EE574A /* ImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURL.swift; sourceTree = "<group>"; };
 		DE498A5F2ADF7E0600EE574A /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		DE498A662ADFA0B600EE574A /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		DE498A682ADFA0EE00EE574A /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		DE498A6D2ADFA22A00EE574A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE498A6C2ADFA11800EE574A /* SnapKit in Frameworks */,
 				DE498A542ADF732000EE574A /* RxCocoa in Frameworks */,
 				DE498A522ADF731C00EE574A /* RxSwift in Frameworks */,
 			);
@@ -173,6 +181,7 @@
 		DE498A452ADF70A600EE574A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				DE498A652ADFA0A900EE574A /* Component */,
 				DE2BF6342ADC16560032F10A /* ViewController.swift */,
 			);
 			path = Main;
@@ -206,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				DE498A5A2ADF787B00EE574A /* URLRequest+Extension.swift */,
+				DE498A682ADFA0EE00EE574A /* UICollectionView+Extension.swift */,
+				DE498A6D2ADFA22A00EE574A /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -216,6 +227,14 @@
 				DE498A5F2ADF7E0600EE574A /* Image.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DE498A652ADFA0A900EE574A /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				DE498A662ADFA0B600EE574A /* ImageCell.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +256,7 @@
 			packageProductDependencies = (
 				DE498A512ADF731C00EE574A /* RxSwift */,
 				DE498A532ADF732000EE574A /* RxCocoa */,
+				DE498A6B2ADFA11800EE574A /* SnapKit */,
 			);
 			productName = "URLSession+CollectionView";
 			productReference = DE2BF62D2ADC16560032F10A /* URLSession+CollectionView.app */;
@@ -312,6 +332,7 @@
 			mainGroup = DE2BF6242ADC16560032F10A;
 			packageReferences = (
 				DE498A4F2ADF72DA00EE574A /* XCRemoteSwiftPackageReference "RxSwift" */,
+				DE498A6A2ADFA10500EE574A /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = DE2BF62E2ADC16560032F10A /* Products */;
 			projectDirPath = "";
@@ -360,7 +381,10 @@
 				DE498A562ADF783400EE574A /* JSONParser.swift in Sources */,
 				DE498A582ADF784500EE574A /* APIProtocol.swift in Sources */,
 				DE498A5B2ADF787B00EE574A /* URLRequest+Extension.swift in Sources */,
+				DE498A672ADFA0B600EE574A /* ImageCell.swift in Sources */,
+				DE498A692ADFA0EE00EE574A /* UICollectionView+Extension.swift in Sources */,
 				DE498A4E2ADF722000EE574A /* NetworkManager.swift in Sources */,
+				DE498A6E2ADFA22A00EE574A /* UIView+Extension.swift in Sources */,
 				DE2BF6312ADC16560032F10A /* AppDelegate.swift in Sources */,
 				DE2BF6332ADC16560032F10A /* SceneDelegate.swift in Sources */,
 				DE498A5D2ADF7A3500EE574A /* ImageURL.swift in Sources */,
@@ -721,6 +745,14 @@
 				version = 6.5.0;
 			};
 		};
+		DE498A6A2ADFA10500EE574A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -733,6 +765,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DE498A4F2ADF72DA00EE574A /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
+		};
+		DE498A6B2ADFA11800EE574A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE498A6A2ADFA10500EE574A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
