@@ -15,6 +15,7 @@
 		DE2BF6482ADC16590032F10A /* URLSession_CollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2BF6472ADC16590032F10A /* URLSession_CollectionViewTests.swift */; };
 		DE2BF6522ADC165A0032F10A /* URLSession_CollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2BF6512ADC165A0032F10A /* URLSession_CollectionViewUITests.swift */; };
 		DE2BF6542ADC165A0032F10A /* URLSession_CollectionViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2BF6532ADC165A0032F10A /* URLSession_CollectionViewUITestsLaunchTests.swift */; };
+		DE498A412ADF6BE100EE574A /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE498A402ADF6BE100EE574A /* KeyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		DE2BF6512ADC165A0032F10A /* URLSession_CollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession_CollectionViewUITests.swift; sourceTree = "<group>"; };
 		DE2BF6532ADC165A0032F10A /* URLSession_CollectionViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession_CollectionViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DE498A3F2ADF6B0100EE574A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		DE498A402ADF6BE100EE574A /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				DE2BF6302ADC16560032F10A /* AppDelegate.swift */,
 				DE2BF6322ADC16560032F10A /* SceneDelegate.swift */,
 				DE2BF6342ADC16560032F10A /* ViewController.swift */,
+				DE498A402ADF6BE100EE574A /* KeyManager.swift */,
 				DE498A3F2ADF6B0100EE574A /* Config.xcconfig */,
 				DE2BF6392ADC16590032F10A /* Assets.xcassets */,
 				DE2BF63B2ADC16590032F10A /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 				DE2BF6352ADC16560032F10A /* ViewController.swift in Sources */,
 				DE2BF6312ADC16560032F10A /* AppDelegate.swift in Sources */,
 				DE2BF6332ADC16560032F10A /* SceneDelegate.swift in Sources */,
+				DE498A412ADF6BE100EE574A /* KeyManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 /* Begin XCBuildConfiguration section */
 		DE2BF6552ADC165A0032F10A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE498A3F2ADF6B0100EE574A /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -371,6 +376,7 @@
 		};
 		DE2BF6562ADC165A0032F10A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE498A3F2ADF6B0100EE574A /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -427,6 +433,7 @@
 		};
 		DE2BF6582ADC165A0032F10A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE498A3F2ADF6B0100EE574A /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -454,6 +461,7 @@
 		};
 		DE2BF6592ADC165A0032F10A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE498A3F2ADF6B0100EE574A /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -481,6 +489,7 @@
 		};
 		DE2BF65B2ADC165A0032F10A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE498A3F2ADF6B0100EE574A /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -501,6 +510,7 @@
 		};
 		DE2BF65C2ADC165A0032F10A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE498A3F2ADF6B0100EE574A /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -521,6 +531,7 @@
 		};
 		DE2BF65E2ADC165A0032F10A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE498A3F2ADF6B0100EE574A /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +550,7 @@
 		};
 		DE2BF65F2ADC165A0032F10A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE498A3F2ADF6B0100EE574A /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
