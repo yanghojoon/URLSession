@@ -47,6 +47,7 @@
 		DE2BF64D2ADC165A0032F10A /* URLSession+CollectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "URLSession+CollectionViewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2BF6512ADC165A0032F10A /* URLSession_CollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession_CollectionViewUITests.swift; sourceTree = "<group>"; };
 		DE2BF6532ADC165A0032F10A /* URLSession_CollectionViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession_CollectionViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DE498A3F2ADF6B0100EE574A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +101,7 @@
 				DE2BF6302ADC16560032F10A /* AppDelegate.swift */,
 				DE2BF6322ADC16560032F10A /* SceneDelegate.swift */,
 				DE2BF6342ADC16560032F10A /* ViewController.swift */,
+				DE498A3F2ADF6B0100EE574A /* Config.xcconfig */,
 				DE2BF6392ADC16590032F10A /* Assets.xcassets */,
 				DE2BF63B2ADC16590032F10A /* LaunchScreen.storyboard */,
 				DE2BF63E2ADC16590032F10A /* Info.plist */,
