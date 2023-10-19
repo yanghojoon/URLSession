@@ -100,7 +100,7 @@ final class ViewController: UIViewController {
         snapshot.appendSections([.basic])
         snapshot.appendItems(images)
         
-        dataSource?.apply(snapshot, animatingDifferences: true)
+        dataSource?.apply(snapshot, animatingDifferences: false)
     }
     
     private func setAttributes() {
@@ -157,16 +157,15 @@ extension ViewController: UICollectionViewDragDelegate, UICollectionViewDropDele
            let fromItem = dataSource?.itemIdentifier(for: origin),
            let toItem = dataSource?.itemIdentifier(for: destination),
            var snapshot = dataSource?.snapshot() {
-            snapshot.deleteItems([fromItem])
             
             if destination.row > origin.row {
-                snapshot.insertItems([fromItem], afterItem: toItem)
+                snapshot.moveItem(fromItem, afterItem: toItem)
             } else {
-                snapshot.insertItems([fromItem], beforeItem: toItem)
+                snapshot.moveItem(fromItem, beforeItem: toItem)
             }
             
             DispatchQueue.main.async { [weak self] in
-                self?.dataSource?.apply(snapshot)
+                self?.dataSource?.apply(snapshot, animatingDifferences: false)
             }
         }
     }
